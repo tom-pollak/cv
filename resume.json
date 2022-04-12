@@ -1,0 +1,238 @@
+{
+    "meta": {
+        "theme": "elegant"
+    },
+    "basics": {
+        "name": "Tom Pollak",
+        "label": "Student @ University of York",
+        "image": "https://tompollak.me/static/portrait-9f8c4780076c0ef5aeffc0c38645b4b0.png",
+        "email": "tcp510@york.ac.uk",
+        "url": "https://tompollak.me",
+        "phone": "(+44) 77400 54268",
+        "summary": "A second year Computer Science student studying at the University of York seeking a summer internship in software development or other related fields. I enjoy learning practically, and have developed a number of personal projects to further my knowledge in areas that interest me. I am most proficient with Python but also have experience in Java and Haskell, with a working knowledge of JavaScript. I also have many years of experience with working with Linux systems and Git version control.",
+        "location": {
+            "address": "1 Tranby Ave",
+            "postalCode": "YO10 3NB",
+            "city": "York",
+            "countryCode": "GB",
+            "region": "England"
+        },
+        "profiles": [
+            {
+                "network": "GitHub",
+                "username": "tom-pollak",
+                "url": "https://github.com/tom-pollak"
+            }
+        ]
+    },
+    "education": [
+        {
+            "institution": "University of York",
+            "url": "https://york.ac.uk",
+            "area": "Computer Science",
+            "studyType": "Bachelors of Engineering",
+            "startDate": "2020-09-01",
+            "endDate": "2023-07-18",
+            "score": "Expected first",
+            "courses": [
+                "Theory 1 - 81%",
+                "Theory 2 - 72%",
+                "Theory 3 - 78%",
+                "Software 1 - 95%",
+                "Software 2 - 94%",
+                "Systems & Devices 1 - 78%",
+                "Systems & Devices 2 - 71%",
+                "Data 1 - 72%",
+                "Data 2 - 72.5%",
+                "Intelligent Systems 1 - 73%",
+                "Human Computer Interaction 1 - 66%",
+                "Human Computer Interaction 2 - 70%" 
+            ]
+        },
+        {
+            "institution": "Lady Manners School",
+            "url": "",
+            "area": "",
+            "studyType": "A-level",
+            "startDate": "2013-09-03",
+            "endDate": "2020-03-18",
+            "score": "A",
+            "courses": [
+                "Further Maths - A",
+                "Maths - A",
+                "Computer Science - A",
+                "Physics - A"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Each Way Matcher",
+            "description": "Automated horse racing program that discovers undervalued horses by the bookmaker in each-way betting.",
+            "highlights": [
+                "Uses an adapted Kelly Criterion strategy to calculate the optimal stake to profit of these undervalued horses.",
+                "Runs headless on a Raspberry Pi as a scheduled cron job every day."
+            ],
+            "keywords": [
+                "Python",
+                "Numpy",
+                "Pandas",
+                "Matplotlib",
+                "Selenium",
+                "BeautifulSoup",
+                "Horse Racing",
+                "Match Betting"
+            ],
+            "startDate": "2020-12-01",
+            "endDate": "2021-07-01",
+            "url": "https://github.com/tom-pollak/each-way-matcher",
+            "type": "Application",
+            "entity": "Individual"
+
+        },
+        {
+            "name": "Pirate Game",
+            "description": "Interactive pirate game using Java and LibGDX." ,
+            "keywords": [
+                "Java",
+                "LibGDX",
+                "Game Development"
+            ],
+            "startDate": "2022-01-01",
+            "endDate": "2022-02-01",
+            "url": "https://github.com/tom-pollak/pirates",
+            "type": "Video Game",
+            "entity": "Group project",
+            "roles": [
+                "Lead Developer"
+            ]
+        },
+        {
+            "name": "Poker Web Application",
+            "description": "Free live poker web app using Python and Django.",
+            "url": "https://github.com/tom-pollak/web-poker",
+            "highlights": [
+                "Users can create accounts and tables, player poker, and chat with other players.",
+                "Uses Django Channels to allow for real-time communication between users.",
+                "Deployed using Docker and Heroku."
+            ],
+            "startDate": "2019-04-01",
+            "endDate": "2020-07-01",
+            "type": "Web application",
+            "entity": "Individual",
+            "keywords": [
+                "Python",
+                "Django",
+                "Docker",
+                "Heroku",
+                "Web Development",
+                "Poker"
+            ]
+        },
+        {
+            "name": "Windows Forensics Analysis - SANS FOR00",
+            "description": "Windows Forensics Analysis - SANS FOR00",
+            "highlights": [
+                "Completed the course over a period of two weeks with live lectures and practical sessions.",
+                "Sponsored to take part through my success in the Cyber Discovery programme."
+            ],
+            "startDate": "2020-08-01",
+            "endDate": "2020-08-14",
+            "url": "https://sans.org/cyber-security-courses/windows-forensic-analysis",
+            "type": "Certification",
+            "keywords": [
+                "Forensic Analysis",
+                "Security"
+            ]
+        },
+        {
+            "name": "Cyber Discovery",
+            "description": "Independently completed the Cyber Discovery programme. I was selected as one of the top 500 (of 28,000) students to attend the Cyber Discovery Elite event in London",
+            "highlights": [
+                "blah"
+            ],
+            "url": "https://joincyberdiscovery.com/",
+            "startDate": "2018-09-01",
+            "endDate": "2019-07-01",
+            "keywords": [
+                "Cyber security",
+                "CTF competition"
+            ]
+        },
+        {
+            "name": "Derbyshire Police",
+            "position": "Mock Police Witness Interviewee",
+            "summary": "Role acting as a witness for Derbyshire Police CID Interview Training.",
+            "highlights": [
+                "Involves being interviewed by police detectives in training, in order to help improve their interview technique on children.",
+                "Requires proficient communication skills, and being able to communicate effectively whilst improvising details from a fictional crime scene."
+            ],
+            "startDate": "2021-03-01",
+            "endDate": "2021-03-31"
+        },
+    ],
+    "awards": [
+        {
+            "title": "Duke of Edinburgh",
+            "date": "2018-01-01"
+        }
+    ],
+    "skills": [
+        {
+            "name": "Python",
+            "level": "Advanced",
+            "keywords": [
+                "Django",
+                "Numpy",
+                "Pandas",
+                "Matplotlib",
+                "Scikit-learn",
+                "BeautifulSoup",
+                "Selenium"
+            ]
+        },
+        {
+            "name": "Web Development",
+            "level": "Intermediate",
+            "keywords": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Vue.js",
+                "Django",
+                "Docker",
+                "Heroku",
+                "PostgreSQL"
+            ]
+        },
+        {
+            "name": "Java",
+            "level": "Intermediate",
+            "keywords": [
+                "LibGDX",
+                "Box2D"
+            ]
+        },
+        {
+            "name": "Haskell",
+            "level": "Beginner"
+        }
+    ],
+    "interests": [
+        {
+            "name": "Climbing"
+        },
+        {
+            "name": "Poker"
+        },
+        {
+            "name": "Mountain biking"
+        },
+        {
+            "name": "Running"
+        },
+        {
+            "name": "Hockey"
+        }
+    ]
+}

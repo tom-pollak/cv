@@ -1,112 +1,207 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Medium Length Professional CV
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Wenneker Resume/CV
 % LaTeX Template
-% Version 2.0 (8/5/13)
+% Version 1.1 (19/6/2016)
 %
 % This template has been downloaded from:
 % http://www.LaTeXTemplates.com
 %
 % Original author:
-% Trey Hunner (http://www.treyhunner.com/)
+% Frits Wenneker (http://www.howtotex.com) with extensive modifications by 
+% Vel (vel@LaTeXTemplates.com)
 %
-% Important note:
-% This template requires the resume.cls file to be in the same directory as the
-% .tex file. The resume.cls file provides the resume style used for structuring the
-% document.
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass{resume} % Use the custom resume.cls style
+\documentclass[a4paper,10pt]{memoir} % Font and paper size
 
-\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\input{structure.tex} % Include the file specifying document layout and packages
 
-\name{John Smith} % Your name
-\address{123 Broadway \\ City, State 12345} % Your address
-\address{123 Pleasant Lane \\ City, State 12345} % Your secondary address (optional)
-\address{(000)~$\cdot$~111~$\cdot$~1111 \\ john@smith.com} % Your phone number and email
+
+\userinformation{ % Set the content that goes into the sidebar of each page
+\begin{center}
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION 
+%----------------------------------------------------------------------------------------
+
+\includegraphics[width=0.75\columnwidth]{portrait.png}\\[\baselineskip] % Your photo
+\small % Smaller font size
+\link{mailto:tcp510@york.ac.uk}{tcp510@york.ac.uk} \\ % Your email address
+(+44) 77400 54268 \\ % Your phone number
+York, UK \\
+\Sep
+\link{https://tompollak.me}{tompollak.me} \\ % Your URL
+\link{https://github.com/tom-pollak}{github.com/tom-pollak} \\ % Your GitHub URL
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES, TECHNOLOGIES, AND INTERESTS
+%----------------------------------------------------------------------------------------
+
+\Sep \Sep
+\textbf{Languages} \\
+\SmallSep
+Python, Java, Haskell, JavaScript, SQL, HTML, CSS \\
+\Sep
+
+\textbf{Technologies} \\
+\SmallSep
+Linux, Git, Vim, Emacs, LaTex, Django, Numpy, Pandas, LibGDX, Docker, Vue.js, Selenium \\
+\Sep
+
+\textbf{Interests} \\
+\SmallSep
+Mountain biking, Climbing, Poker, Chess, Running, Hockey \\
+\end{center}
+\vfill % Whitespace under this block to push it up under the photo
+}
+
+%----------------------------------------------------------------------------------------
 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
+\userinformation % Print your information in the left column
 
-\begin{rSection}{Education}
-
-{\bf University of California, Berkeley} \hfill {\em June 2004} \\ 
-B.S. in Computer Science \& Engineering \\
-Minor in Linguistics \smallskip \\
-Member of Eta Kappa Nu \\
-Member of Upsilon Pi Epsilon \\
-Overall GPA: 5.678
-
-\end{rSection}
+\framebreak % End of the first column
 
 %----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
+%	HEADING
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{Experience}
+\cvheading{Tom Pollak} % Large heading - your name
 
-\begin{rSubsection}{ACME, Inc}{October 2010 - Present}{Web Developer}{Palo Alto, CA}
-\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.
-\item Donec et mollis dolor. Praesent et diam eget libero Adobe Coldfusion egestas mattis sit amet vitae augue.
-\item Nam tincidunt congue enim, ut porta lorem Microsoft SQL lacinia consectetur.
-\item Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-\item Pellentesque auctor nisi id magna consequat JavaScript sagittis.
-\item Aliquam at massa ipsum. Quisque bash bibendum purus convallis nulla ultrices ultricies.
-\end{rSubsection}
+\cvsubheading{CS Student @ University of York} % Subheading - your occupation/specialization
+
+%----------------------------------------------------------------------------------------
+%	ABOUT ME
+%----------------------------------------------------------------------------------------
+
+\aboutme{About Me}{
+	A second year Computer Science student studying at the University of York
+	seeking a summer internship in software development or other related fields.
+	I enjoy learning practically, and have developed a number of personal
+	projects to further my knowledge in areas that interest me. I am most
+	proficient with Python but also have experience in Java and Haskell, with a
+	working knowledge of JavaScript. I also have many years of experience with
+	working with Linux systems and Git version control.
+}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\CVSection{Education}
 
 %------------------------------------------------
 
-\begin{rSubsection}{AJAX Hosting}{December 2009 - October 2010}{Lead Developer}{Austin, TX}
-\item Aenean ut gravida lorem. Ut turpis felis, Perl pulvinar a semper sed, adipiscing id dolor.
-\item Curabitur dapibus enim sit amet elit pharetra tincidunt website feugiat nisl imperdiet. Ut convallis AJAX libero in urna ultrices accumsan.
-\item Cum sociis natoque penatibus et magnis dis MySQL parturient montes, nascetur ridiculus mus.
-\item In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.
-\item Nullam cursus suscipit nisi, et ultrices justo sodales nec. Fusce venenatis facilisis lectus ac semper.
-\end{rSubsection}
+\CVItem{University of York}{2020 - 2023}{https://york.ac.uk}{
+	BEng Computer Science - Average 77\%, Expected First \\[2pt]
+	\begin{tabular}{ p{0.2\textwidth} p{0.2\textwidth} p{0.3\textwidth} }
+		\bluebullet Theory 1 (81\%) & \bluebullet Theory 2 (72\%) & \bluebullet Theory 3 (78\%) \\
+		\bluebullet Data 1 (72\%) & \bluebullet Data 2 (72.5\%) & \bluebullet Intelligent Systems 1 (73\%)  \\
+		\bluebullet Software 1 (95\%) & \bluebullet Software 2 (94\%) & \bluebullet Systems \& Devices 1 (78\%) \\
+		\bluebullet \raggedright Human Computer \hspace*{8pt} Interaction 1 (66\%) & \bluebullet \raggedright Human Computer \hspace*{8pt} Interaction 2 (70\%) & \bluebullet Systems \& Devices 2 (71\%) \\
+	\end{tabular}
+}
 
 %------------------------------------------------
 
-\begin{rSubsection}{TinySoft}{January 2008 - April 2010}{Web Designer \& Developer}{Gainesville, GA}
-\item Vivamus PostgreSQL fermentum semper porta. Nunc diam velit PHP, adipiscing ut tristique vitae
-\item Maecenas convallis ullamcorper ultricies stylesheets.
-\item Quisque mi metus, unit tests CSS ornare sit amet fermentum et, tincidunt et orci.
-\item Curabitur venenatis pulvinar tellus gravida ornare. Sed et erat faucibus nunc euismod ultricies ut id
-\end{rSubsection}
+\CVItem{Lady Manners School}{2020}{}{
+	A-Level \& GCSE \\[2pt]
+	\begin{tabular}{ p{0.3\textwidth} p{0.3\textwidth} }
+		\bluebullet Further Maths (A) & \bluebullet Maths (A) \\
+		\bluebullet Computer Science (A) & \bluebullet Physics (A) \\
+		\bluebullet GCSE: 5 8s, 2 7s, 2 6s, 1 5. \\
+	\end{tabular}
+}
 
-\end{rSection}
-
-%----------------------------------------------------------------------------------------
-%	TECHNICAL STRENGTHS SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Technical Strengths}
-
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Computer Languages & Prolog, Haskell, AWK, Erlang, Scheme, ML \\
-Protocols \& APIs & XML, JSON, SOAP, REST \\
-Databases & MySQL, PostgreSQL, Microsoft SQL \\
-Tools & SVN, Vim, Emacs
-\end{tabular}
-
-\end{rSection}
 
 %----------------------------------------------------------------------------------------
-%	EXAMPLE SECTION
+%	EXPERIENCE
 %----------------------------------------------------------------------------------------
 
-%\begin{rSection}{Section Name}
+\CVSection{Projects}
 
-%Section content\ldots
+%------------------------------------------------
 
-%\end{rSection}
+\CVItem{Each Way Matcher}{December 2020 - July 2021}{https://github.com/tom-pollak/each-way-matcher}{
+	Automated horse racing program that discovers undervalued horses by the bookmaker in each-way betting.
+	\begin{itemize}
+		\item Uses an adapted Kelly Criterion strategy to calculate the optimal stake to profit of these undervalued horses.
+		\item Runs headless on a Raspberry Pi as a scheduled cron job every day.
+	\end{itemize}
+}
+
+%------------------------------------------------
+
+\CVItem{Pirate Game}{January - February 2022}{https://github.com/tom-pollak/pirates}{
+	Interactive pirate game using Java and LibGDX.
+}
+
+%------------------------------------------------
+
+\CVItem{Poker Web Application}{April 2019 - July 2020}{https://github.com/tom-pollak/web-poker}{
+	Free live poker web app using Python and Django.
+	\begin{itemize}
+		\item Users can create accounts and tables, play poker, chat with other players.
+		\item Uses Django Channels to allow for real-time communication between users.
+		\item Deployed using Docker and Heroku.
+	\end{itemize}
+}
+
+%------------------------------------------------
+
+\CVItem{SANS Institute, \textit{FOR500 Windows Forensic Analysis} }{August 2020}{https://www.sans.org/cyber-security-courses/windows-forensic-analysis}{
+	\begin{itemize}
+		\item Sponsored to take part through my success in the Cyber Discovery programme.
+	\end{itemize}
+}
+
+%------------------------------------------------
+
+\CVItem{Cyber Discovery}{September 2018 - July 2019}{https://joincyberdiscovery.com/}{
+	Independently completed the Cyber Discovery programme, run by HM government.
+	\begin{itemize}
+		\item I was selected as one of the top 500 (of 28,000) students to attend the Cyber Discovery Elite event in London.
+	\end{itemize}
+}
 
 %----------------------------------------------------------------------------------------
+%	Work
+%----------------------------------------------------------------------------------------
+
+\CVSection{Work}
+
+%------------------------------------------------
+
+\CVItem{Glasshouse Bar, \textit{Bartender}}{September 2021 - Present}{}{
+	Working as a bartender at the York University Student Union.
+}
+
+%------------------------------------------------
+
+\CVItem{Seafood Bar \& Grill, \textit{Waiter}}{July - September 2021}{}{}
+
+%------------------------------------------------
+
+\CVItem{Derbyshire Police, \textit{Mock Police Witness Interviewee}}{March 2021}{}{
+	Role acting as a witness for Derbyshire Police CID Interview Training.
+	\begin{itemize}
+		\item Involves being interviewed by police detectives in training, in order to help improve their interview technique on children.
+		\item Requires proficient communication skills, and being able to communicate effectively whilst improvising details from a fictional crime scene.
+	\end{itemize}
+}
+
+%------------------------------------------------
+
+\CVItem{Fishpond, \textit{Bartender}}{June - September 2020}{}{}
+
+%------------------------------------------------
 
 \end{document}
