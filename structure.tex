@@ -27,6 +27,7 @@
 \usepackage{multicol}
 \usepackage{hyperref}
 \usepackage{cfr-lm}
+\usepackage{ifthen}
 
 
 \usepackage[top=1cm,left=1cm,right=1cm,bottom=1cm]{geometry} % Modify margins
@@ -91,9 +92,8 @@
 }
 	
 \newcommand{\CVSection}[1]{ % New command for the headings within sections
-\Sep
-{\Large\textbf{#1}}\par
-\SmallSep % Used for spacing
+\SmallSep
+{\Large\textbf{#1}}\par\SmallSep % Used for spacing
 }
 
 
@@ -101,11 +101,19 @@
 \newcommand{\CVItem}[4]{ % New command for the item descriptions
 \textbf{\color{RoyalBlue} \link{#3}{#1}} \Date{#2} \par\SmallSep
 #4
-\SmallSep % Used for spacing
+\InsertSmallSepIfNonEmpty{#4}
 }
 
 \newcommand{\Date}[1]{
 \hspace*{10pt}{\small \textcolor{CadetBlue}{\textit{\sbweight{#1}}}}
+}
+
+\newcommand{\InsertSmallSepIfNonEmpty}[1]{
+    \if\relax\detokenize{#1}\relax
+    
+    \else
+        \par\SmallSep
+    \fi
 }
 
 \makeatletter
