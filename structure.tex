@@ -26,6 +26,7 @@
 \usepackage[none]{hyphenat} % Disable hyphenation
 \usepackage{multicol}
 \usepackage{hyperref}
+\usepackage{cfr-lm}
 
 
 \usepackage[top=1cm,left=1cm,right=1cm,bottom=1cm]{geometry} % Modify margins
@@ -96,10 +97,15 @@
 }
 
 
+
 \newcommand{\CVItem}[4]{ % New command for the item descriptions
-\textbf{\color{RoyalBlue} \link{#3}{#1}} \hfill {\small\textbf{#2}\par\vspace*{3pt}}
+\textbf{\color{RoyalBlue} \link{#3}{#1}} \Date{#2} \par\SmallSep
 #4
 \SmallSep % Used for spacing
+}
+
+\newcommand{\Date}[1]{
+\hspace*{10pt}{\small \textcolor{CadetBlue}{\textit{\sbweight{#1}}}}
 }
 
 \makeatletter
