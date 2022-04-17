@@ -93,7 +93,7 @@
 	
 \newcommand{\CVSection}[1]{ % New command for the headings within sections
 \SmallSep
-{\Large\textbf{#1}}\par\SmallSep % Used for spacing
+{\Large{\textbf{#1}}}\par\SmallSep % Used for spacing
 }
 
 
@@ -105,7 +105,15 @@
 }
 
 \newcommand{\Date}[1]{
-\hspace*{10pt}{\small \textcolor{CadetBlue}{\textit{\sbweight{#1}}}}
+\hfill{\small{\textcolor{CadetBlue}{\textit{\sbweight{#1}}}}}
+}
+
+\newcommand{\Module}[2]{
+    \bluebullet #1 \hspace*{2pt}{\small\textit{(#2\%)}}
+}
+
+\newcommand{\ALevel}[2]{ % Same as module, without the %
+    \bluebullet #1 \hspace*{2pt}{\small\textit{(#2)}}
 }
 
 \newcommand{\InsertSmallSepIfNonEmpty}[1]{
