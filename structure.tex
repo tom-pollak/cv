@@ -30,7 +30,8 @@
 \usepackage{ifthen}
 
 
-\usepackage[top=1cm,left=1cm,right=1cm,bottom=1cm]{geometry} % Modify margins
+\usepackage[top=1cm,left=0.7cm,right=0.7cm,bottom=1cm]{geometry} % Modify margins
+
 
 \usepackage{graphicx} % Required for figures
 
@@ -106,8 +107,7 @@
 % #5: Link
 % #6: Description
 \newcommand{\CVItem}[6]{ % New command for the item descriptions
-\CreateTitle{#1}{#2}{#5} \Date{#4} \par\SmallSep
-% \InsertLocation{#3}{#6}
+\CreateTitle{#1}{#2}{#5}{#3} \Date{#4} \par\SmallSep
 #6
 \InsertSmallSepIfNonEmpty{#6}
 }
@@ -116,8 +116,8 @@
 \hfill{ \small{\textcolor{CadetBlue}{\textit{\sbweight{#1}}}} }
 }
 
-\newcommand{\DateLocation}[1]{
-\hfill{ \small{\textcolor{CadetBlue}{\textit{\sbweight{#1}}}} }
+\newcommand{\DateLocation}[2]{
+\hfill{{\small  \textcolor{CadetBlue}{\sbweight{#2} \hspace*{2pt}} \textit{#1}} }
 }
 
 
@@ -146,19 +146,21 @@
     \fi
 }
 
-\newcommand{\IsEmpty}[1]{
-    \relax\detokenize{#1}\relax
-}
 
 % Parameters
 % #1: Title
 % #2: Position
 % #3: Link
-\newcommand{\CreateTitle}[3]{
+% #4: Location
+\newcommand{\CreateTitle}[4]{
     \if\relax\detokenize{#2}\relax
         \textbf{\color{RoyalBlue} \link{#3}{#1}}
     \else
-        \textbf{\color{RoyalBlue} \link{#3}{#1, \textit{#2}}}
+        \textbf{\color{RoyalBlue} \link{#3}{#1, \textit{#2}}} 
+    \fi
+    \if\relax\detokenize{#4}\relax
+    \else
+        \hspace*{3pt} \textit{#4}
     \fi
 }
 
