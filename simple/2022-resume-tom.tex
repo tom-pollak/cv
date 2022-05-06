@@ -1,0 +1,109 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{structure} % Use the custom resume.cls style
+
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+
+\name{Tom Pollak} % Your name
+\address{York, UK} % Your address
+\address{(+44)~$\cdot$~7740~$\cdot$~054268} % Your phone number and email
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+{\bf University of York} \hfill{2023} \\
+BEng. Computer Science \smallskip \\
+Weighted average: 77\%, Expected First
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Experience}
+
+\begin{rSubsection}{Cisco Meraki}{June - August 2022}{Full Stack Engineer Intern}{London, UK}{}
+   test 
+\end{rSubsection}
+
+\end{rSection}
+
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Projects}
+
+\begin{rSubsection}{Automated Horse Betting Software}{December 2020 - July 2021}{}{}{https://github.com/tom-pollak/each-way-matcher}
+    \item Discovers undervalued horses by the bookmaker in each-way betting
+    \item Uses an adapted Kelly Criterion strategy to calculate the optimal stake of these undervalued horses
+    \item Uses Python, Pandas and Selenium to scrape the horse races, interacts with Betfair API to place bets
+    \item Runs headless on a Raspberry Pi as a scheduled cron job every day
+\end{rSubsection}
+
+\begin{rSubsection}{Pirate Game}{January - February 2022}{}{}{https://github.com/tom-pollak/pirates}
+    \item Pirate video game using Java and LibGDX
+\end{rSubsection}
+
+\begin{rSubsection}{Poker Web Application}{April 2019 - July 2020}{}{}{https://github.com/tom-pollak/web-poker}
+    \item Free live poker web app using Python and Django
+    \item Users can create accounts and tables, play poker, and chat with other players
+    \item Uses Django Channels for real-time communication with the users
+    \item Deployed with Docker and Heroku.
+\end{rSubsection}
+
+\begin{rSubsection}{SANS Institute}{August 2020}{FOR500 Windows Forensic Analysis}{}{https://www.sans.org/cyber-security-courses/windows-forensic-analysis}
+    \item Sponsored to take part through my success in the Cyber Discovery programme
+\end{rSubsection}
+
+\begin{rSubsection}{Cyber Discovery}{September 2018 - July 2019}{}{}{}
+    \item Independently completed the Cyber Discovery programme, run by HM government
+    \item Selected as one of the top 500 (of 28,000) students to attend the Cyber Discovery Elite event in London
+\end{rSubsection}
+    
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Skills}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Languages & Python, Java, Haskell, SQL, HTML \\
+Tools & Linux, Vim, Git, LaTeX, RegEx, SQLite \\
+Technologies & Django, Numpy, Pandas, Selenium, LibGDX, Docker \\
+\end{tabular}
+
+\end{rSection}
+
+
+\end{document}

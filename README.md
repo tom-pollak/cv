@@ -1,3 +1,6 @@
 # CV
 
-You can find my CV [here](https://tom-pollak.github.io/cv/cv/cv.pdf)
+CVs:
+
+- [Pretty](https://tom-pollak.github.io/cv/pretty/2022-resume-tom.pdf)
+- [Simple](https://tom-pollak.github.io/cv/simple/2022-resume-tom.pdf)
