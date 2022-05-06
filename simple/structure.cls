@@ -27,12 +27,14 @@
 \usepackage{ifthen} % Required for ifthenelse statements
 \usepackage{hyperref}
 \usepackage{ragged2e}
+\usepackage{tabularx} % in the preamble
 
 \pagestyle{empty} % Suppress page numbers
 
 %----------------------------------------------------------------------------------------
 %	HEADINGS COMMANDS: Commands for printing name and address
 %----------------------------------------------------------------------------------------
+
 
 \def \name#1{\def\@name{#1}} % Defines the \name command to set name
 \def \@name {} % Sets \@name to empty by default
@@ -72,20 +74,18 @@
 %	PRINT THE HEADING LINES
 %----------------------------------------------------------------------------------------
 
-\let\ori@document=\document
-\renewcommand{\document}{
-  \ori@document  % Begin document
-  \printname % Print the name specified with \name
-  \@ifundefined{@addressone}{}{ % Print the first address if specified
-    \printaddress{\@addressone}}
-  \@ifundefined{@addresstwo}{}{ % Print the second address if specified
-    \printaddress{\@addresstwo}}
-     \@ifundefined{@addressthree}{}{ % Print the third address if specified
-    \printaddress{\@addressthree}}
-  \hrule % Horizontal line
-  \bigskip
+% \let\ori@document=\document
+% \renewcommand{\document}{
+%   \ori@document  % Begin document
+%   \printname % Print the name specified with \name
+%   \@ifundefined{@addressone}{}{ % Print the first address if specified
+%     \printaddress{\@addressone}}
+%   \@ifundefined{@addresstwo}{}{ % Print the second address if specified
+%     \printaddress{\@addresstwo}}
+%      \@ifundefined{@addressthree}{}{ % Print the third address if specified
+%     \printaddress{\@addressthree}}
   
-}
+% }
 
 %----------------------------------------------------------------------------------------
 %	SECTION FORMATTING
