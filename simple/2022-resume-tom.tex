@@ -1,3 +1,4 @@
+% !TEX TS-program = xelatex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Medium Length Professional CV
 % LaTeX Template
@@ -22,34 +23,62 @@
 
 \documentclass{structure} % Use the custom resume.cls style
 
+% \documentclass[a4paper,10pt]{memoir} % Font and paper size
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+% \documentclass{article}
+% \usepackage{fontspec}
+% \setmainfont{ebgaramond}
+% \usepackage{ebgaramond}
+\usepackage{fontspec}
+\setmainfont[]{Arial}
+% \fontspec[Mapping=tex-text]{EB Garamond}
 
 \name{Tom Pollak} % Your name
 % \address{York, UK} % Your address
 % \address{(+44)~$\cdot$~7740~$\cdot$~054268} % Your phone number and email
 
 \begin{document}
-{\namesize\bf{Tom Pollak}}
-\par\smallskip
 
 
-\noindent\begin{tabularx}{\textwidth}{@{}XXr}
-York, UK & & \href{https://github.com/tom-pollak}{github.com/tom-pollak}\\
-\href{mailto:tompollak1000@gmail.com}{tompollak1000@gmail.com} & (+44) 7740 054268 & \href{https://tompollak.me}{tompollak.me}
-\end{tabularx}
-\par\smallskip
+% \noindent\begin{tabularx}{\textwidth}{@{}XXr}
+% York, UK & & \href{https://github.com/tom-pollak}{github.com/tom-pollak}\\
+% \href{mailto:tompollak1000@gmail.com}{tompollak1000@gmail.com} & (+44) 7740 054268 & \href{https://tompollak.me}{tompollak.me}
+% \end{tabularx}
+% \par\smallskip
+
+\parbox{0.5\textwidth}{ % First block
+\begin{tabbing} % Enables tabbing
+\hspace{2cm} \= \hspace{4cm} \= \kill % Spacing within the block
+{\namesize\bf{Tom Pollak}} \\[6pt]
+{\bf Location} \> York, UK\\ % Address line 1
+{\bf Email} \> \href{mailto:tompollak1000@gmail.com}{tompollak1000@gmail.com}  % Date of birth 
+\end{tabbing}}
+\hfill % Horizontal space between the two blocks
+\parbox{0.5\textwidth}{ % Second block
+\vspace*{10pt}
+\begin{tabbing} % Enables tabbing
+\hspace{2cm} \= \hspace{4cm} \= \kill % Spacing within the block
+{\bf GitHub} \> \href{https://github.com/tom-pollak}{github.com/tom-pollak} \\ % Home phone
+{\bf Website} \> \href{https://tompollak.me}{tompollak.me} \\  % Email address
+{\bf Phone} \> (+44) 77400 054268 % Mobile phone
+\end{tabbing}}
+
+\smallskip
 \hrule % Horizontal line
-\bigskip
+\smallskip
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Education}
 
-{\bf University of York} \hfill{2023} \\
-BEng. Computer Science \smallskip \\
-Weighted average: 77\%, Expected First
+\begin{rSubsection}{University of York}{2023}{BEng. Computer Science}{}{}
+    \item Weighted average: 77\%, Expected First
+\end{rSubsection}
 
+\begin{rSubsection}{Lady Manners School}{2020}{A-Level}{}{}
+    \item Further Maths (A), Maths (A), Computer Science (A), Physics (A)
+\end{rSubsection}
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
@@ -59,7 +88,7 @@ Weighted average: 77\%, Expected First
 \begin{rSection}{Experience}
 
 \begin{rSubsection}{Cisco Meraki}{June - August 2022}{Full Stack Engineer Intern}{London, UK}{}
-   test 
+   \item test 
 \end{rSubsection}
 
 \end{rSection}
@@ -71,7 +100,7 @@ Weighted average: 77\%, Expected First
 
 \begin{rSection}{Projects}
 
-\begin{rSubsection}{Automated Horse Betting Software}{December 2020 - July 2021}{}{}{https://github.com/tom-pollak/each-way-matcher}
+\begin{rSubsection}{Automated Horse Betting Program}{December 2020 - July 2021}{}{}{https://github.com/tom-pollak/each-way-matcher}
     \item Discovers undervalued horses by the bookmaker in each-way betting
     \item Uses an adapted Kelly Criterion strategy to calculate the optimal stake of these undervalued horses
     \item Uses Python, Pandas and Selenium to scrape the horse races, interacts with Betfair API to place bets
