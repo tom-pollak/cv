@@ -124,7 +124,7 @@
   {\small\link{#5}}
   }
   \smallskip
-  \begin{list}{$\sbullet[0.6]$}{\leftmargin=0.75em} % \cdot used for bullets, no indentation
+  \begin{list}{$\sbullet[0.6]$}{\leftmargin=1em} % \cdot used for bullets, no indentation
    \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
   }{
   \end{list}
