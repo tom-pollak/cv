@@ -21,64 +21,37 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass{structure} % Use the custom resume.cls style
+\documentclass{structure} 
 
-% \documentclass[a4paper,10pt]{memoir} % Font and paper size
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
-% \documentclass{article}
-% \usepackage{fontspec}
-% \setmainfont{ebgaramond}
-% \usepackage{ebgaramond}
 \usepackage{fontspec}
 \setmainfont[]{Roboto}
-% \fontspec[Mapping=tex-text]{EB Garamond}
 
-\name{Tom Pollak} % Your name
-% \address{York, UK} % Your address
-% \address{(+44)~$\cdot$~7740~$\cdot$~054268} % Your phone number and email
+\name{Tom Pollak} 
 
 \begin{document}
 
 
-% \noindent\begin{tabularx}{\textwidth}{@{}XXr}
-% York, UK & & \href{https://github.com/tom-pollak}{github.com/tom-pollak}\\
-% \href{mailto:tompollak1000@gmail.com}{tompollak1000@gmail.com} & (+44) 7740 054268 & \href{https://tompollak.me}{tompollak.me}
-% \end{tabularx}
-% \par\smallskip
-
-% \parbox{0.5\textwidth}{ % First block
-% \begin{tabbing} % Enables tabbing
-% \hspace{2cm} \= \hspace{4cm} \= \kill % Spacing within the block
-% {\namesize\bf{Tom Pollak}} \\[6pt]
-% {\bf Location} \> York, UK\\ % Address line 1
-% {\bf Email} \> \href{mailto:tompollak1000@gmail.com}{tompollak1000@gmail.com}  % Date of birth 
-% \end{tabbing}}
-\parbox{0.5\textwidth}{ % First block
+\parbox{0.5\textwidth}{ 
 {\namesize\bf{Tom Pollak}} \\[6pt]
-York, UK\\ % Address line 1
-\href{mailto:tompollak1000@gmail.com}{tompollak1000@gmail.com}}  % Date of birth 
-\hfill % Horizontal space between the two blocks
-\parbox{0.5\textwidth}{ % Second block
+York, UK\\ 
+\href{mailto:tompollak1000@gmail.com}{tompollak1000@gmail.com}
+}
+\hfill 
+\parbox{0.5\textwidth}{ 
 \vspace*{10pt}
-% \begin{tabbing} % Enables tabbing
-% \hspace{2cm} \= \hspace{4cm} \= \kill % Spacing within the block
-% {\bf GitHub} \> \href{https://github.com/tom-pollak}{github.com/tom-pollak} \\ % Home phone
-% {\bf Website} \> \href{https://tompollak.me}{tompollak.me} \\  % Email address
-% {\bf Phone} \> (+44) 77400 054268 % Mobile phone
-% \end{tabbing}
-
 
 \begin{flushright}
-    
-\href{https://github.com/tom-pollak}{github.com/tom-pollak} \\ % Home phone
-\href{https://tompollak.me}{tompollak.me} \\  % Email address
-(+44) 77400 054268 % Mobile phone
+
+\href{https://github.com/tom-pollak}{github.com/tom-pollak} \\
+\href{https://tompollak.me}{tompollak.me} \\
+(+44) 77400 054268
 \end{flushright}
 
 }
 
 \smallskip
-\hrule % Horizontal line
+\hrule
 \smallskip
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
@@ -87,11 +60,11 @@ York, UK\\ % Address line 1
 \begin{rSection}{Education}
 
 \begin{rSubsection}{University of York}{2023}{BEng. Computer Science}{}{}
-    \item Weighted average: 77\%, Expected First
+    \item Weighted average: 77\%, Expected First.
 \end{rSubsection}
 
 \begin{rSubsection}{Lady Manners School}{2020}{A-Level}{}{}
-    \item Further Maths (A), Maths (A), Computer Science (A), Physics (A)
+    \item Further Maths (A), Maths (A), Computer Science (A), Physics (A).
 \end{rSubsection}
 \end{rSection}
 
@@ -115,32 +88,31 @@ York, UK\\ % Address line 1
 \begin{rSection}{Projects}
 
 \begin{rSubsection}{Automated Horse Betting Program}{December 2020 - July 2021}{}{}{https://github.com/tom-pollak/each-way-matcher}
-    \item Discovers undervalued horses by the bookmaker in each-way betting
-    \item Uses an adapted Kelly Criterion strategy to calculate the optimal stake of these undervalued horses
-    \item Uses Python, Pandas and Selenium to scrape the horse races, interacts with Betfair API to place bets
-    \item Runs headless on a Raspberry Pi as a scheduled cron job every day
+    \item Discovers undervalued horses by the bookmaker in each-way betting.
+    \item Uses an adapted Kelly Criterion strategy to calculate the optimal stake of these undervalued horses.
+    \item Uses Python, Pandas and Selenium to scrape the horse races, interacts with Betfair API to place bets.
+    \item Runs headless on a Raspberry Pi as a scheduled cron job every day.
 \end{rSubsection}
 
 \begin{rSubsection}{Pirate Game}{January - February 2022}{}{}{https://github.com/tom-pollak/pirates}
-    \item Pirate video game using Java and LibGDX
+    \item Pirate themed video game using Java and LibGDX.
 \end{rSubsection}
 
 \begin{rSubsection}{Poker Web Application}{April 2019 - July 2020}{}{}{https://github.com/tom-pollak/web-poker}
-    \item Free live poker web app using Python and Django
-    \item Users can create accounts and tables, play poker, and chat with other players
-    \item Uses Django Channels for real-time communication with the users
+    \item Free live poker web app using Python and Django.
+    \item Users can create accounts and tables, play poker, and chat with other players.
+    \item Uses Django Channels for real-time communication with the users.
     \item Deployed with Docker and Heroku.
 \end{rSubsection}
 
 \begin{rSubsection}{SANS Institute}{August 2020}{FOR500 Windows Forensic Analysis}{}{https://www.sans.org/cyber-security-courses/windows-forensic-analysis}
-    \item Sponsored to take part through my success in the Cyber Discovery programme
+    \item Sponsored through my success in the Cyber Discovery programme.
 \end{rSubsection}
 
 \begin{rSubsection}{Cyber Discovery}{September 2018 - July 2019}{}{}{}
-    \item Independently completed the Cyber Discovery programme, run by HM government
-    \item Selected as one of the top 500 (of 28,000) students to attend the Cyber Discovery Elite event in London
+    \item Independently completed the Cyber Discovery programme, run by HM government.
+    \item Selected as one of the top 500 (of 28,000) students to attend the Cyber Discovery Elite event in London.
 \end{rSubsection}
-    
 
 \end{rSection}
 
@@ -151,9 +123,9 @@ York, UK\\ % Address line 1
 \begin{rSection}{Skills}
 
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Languages & Python, Java, Haskell, SQL, HTML \\
-Tools & Linux, Vim, Git, VSCode, JetBrains Suite, RegEx, SQLite, {\fontfamily{cmr}\selectfont\LaTeX} \\
-Technologies & Django, Numpy, Pandas, Selenium, LibGDX, GitHub, Docker \\
+Languages & Python, Java, Haskell, SQL, HTML. \\
+Tools & Linux, Vim, Git, VSCode, JetBrains Suite, RegEx, SQLite, {\fontfamily{lmr}\selectfont\LaTeX}. \\
+Technologies & Django, Numpy, Pandas, Selenium, LibGDX, GitHub, Docker. \\
 \end{tabular}
 
 \end{rSection}
