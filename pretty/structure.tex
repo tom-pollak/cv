@@ -1,34 +1,28 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Wenneker Resume/CV
-% Structure Specification File
-% Version 1.1 (19/6/2016)
-%
-% This file has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Frits Wenneker (http://www.howtotex.com) with extensive modifications by 
-% Vel (vel@latextemplates.com)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
 % \usepackage{XCharter} % Use the Bitstream Charter font
-\usepackage[default,scale=0.95]{opensans}
-\usepackage[utf8]{inputenc} % Required for inputting international characters
-\usepackage[T1]{fontenc} % Output font encoding for international characters
+% \usepackage[T1]{fontenc} % Output font encoding for international characters
+% \usepackage[default,scale=0.95]{opensans}
+
+% \usepackage[default]{opensans}
+
 \usepackage[none]{hyphenat} % Disable hyphenation
 \usepackage{multicol}
 \usepackage{hyperref}
 \usepackage{cfr-lm}
-\usepackage{ifthen}
+\usepackage{xifthen}
 
+\usepackage{fontspec}
+\setmainfont[%  
+  BoldFont      =Open Sans Bold,
+  ItalicFont    =Open Sans Italic,
+  BoldItalicFont=Open Sans Bold Italic]{Open Sans Regular}
+\newfontfamily\light[%
+  BoldFont      =Open Sans Semibold,
+  ItalicFont    =Open Sans Light Italic,
+  BoldItalicFont=Open Sans Semibold Italic]{Open Sans Light}
 
 \usepackage[top=1cm,left=0.7cm,right=0.7cm,bottom=1cm]{geometry} % Modify margins
 
