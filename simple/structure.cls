@@ -120,6 +120,8 @@
 
 \newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
 
+\newcommand\sdash[1][1]{\mathbin{\vcenter{\hbox{\scalebox{#1}{--}}}}}
+
 \makeatletter
 \newcommand*{\link}{\begingroup\@makeother\#\@mylink}
 \newcommand*{\@mylink}[1]{\href[pdfnewwindow=true]{#1}{#1}\endgroup} 

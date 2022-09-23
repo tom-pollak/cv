@@ -5,6 +5,7 @@
 \documentclass{structure} 
 
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\usepackage{xcolor}
 \usepackage{fontspec}
 \setmainfont[]{Roboto}
 % \setmainfont[]{Arial}
@@ -42,7 +43,7 @@ York, UK\\
 \begin{rSection}{Education}
 
 \begin{rSubsection}{University of York}{2023}{BEng. Computer Science}{}{}
-    \item Weighted average: 77\%, Expected First.
+    \item Weighted average: 77\% 
 \end{rSubsection}
 
 \begin{rSubsection}{Lady Manners School}{2020}{A-Level}{}{}
@@ -56,12 +57,17 @@ York, UK\\
 
 \begin{rSection}{Experience}
 
-\begin{rSubsection}{Cisco Meraki}{June - August 2022}{Full Stack Engineer Intern}{London, UK}{}
-    \item 
+\begin{rSubsection}{Cisco Meraki}{June - August 2022}{Software Engineer Intern - Camera Intelligence}{London, UK}{}
+    \item Worked with the camera team on the attribute search project, designed and implemented an NLP based image search model
+    which would allow users to use a text box to search for any object in a video feed.
+    \item Uses \href{https://openai.com/blog/clip/}{OpenAI's CLIP model} derivative \href{https://github.com/DRSY/MoTIS}{MoTIS}
+    to encode images and \href{https://github.com/DRSY/MoTIS}{Spotify's Annoy} library to index the images. I used the current motion
+    detector model to feed images into the CLIP model.
+    \item Implemented pipeline in C++, used Pytorch and NCNN model frameworks.
+    \item Using my approach, 10 minute video could be queried in 0.2 seconds -- faster than most non-NLP based models.
+    \item \href{https://gist.githubusercontent.com/tom-pollak/1a2e8c1fc61ba269e25c73c02c78007c/raw/45c8cbceda8cd745d6d00cb16a09979778df663b/gistfile1.txt}{\color{blue}{Reference}}
 \end{rSubsection}
-
 \end{rSection}
-
 
 %----------------------------------------------------------------------------------------
 %	PROJECTS SECTION
@@ -71,19 +77,19 @@ York, UK\\
 
 \begin{rSubsection}{Automated Horse Betting Program}{December 2020 - July 2021}{}{}{https://github.com/tom-pollak/each-way-matcher}
     \item Discovers undervalued horses by the bookmaker in each-way betting.
-    \item Uses an adapted Kelly Criterion strategy to calculate the optimal stake of these undervalued horses.
+    \begin{list}{$\sbullet[0.6]$}{\leftmargin=1em} 
+    \itemsep -0.5em \vspace{-0.5em} 
+        \item Exploits the idea that the bookmaker calculates the odds of a horse placing using only the win odds of the horse, without using data from the other horses in the race.
+    \end{list}
+    \item Uses an adapted Kelly Criterion strategy with Expected Growth to calculate the optimal stake.
     \item Uses Python, Pandas and Selenium to scrape the horse races, interacts with Betfair API to place bets.
     \item Runs headless on a Raspberry Pi as a scheduled cron job every day.
 \end{rSubsection}
 
-\begin{rSubsection}{Pirate Game}{January - February 2022}{}{}{https://github.com/tom-pollak/pirates}
-    \item Pirate themed video game using Java and LibGDX.
-\end{rSubsection}
-
 \begin{rSubsection}{Poker Web Application}{April 2019 - July 2020}{}{}{https://github.com/tom-pollak/web-poker}
-    \item Free live poker web app using Python and Django.
+    \item Free live poker web app using Python and Django and a Postgres database.
     \item Users can create accounts and tables, play poker, and chat with other players.
-    \item Uses Django Channels for real-time communication with the users.
+    \item Implements websockets using Django Channels and Redis for real-time communication with the users.
     \item Deployed with Docker and Heroku.
 \end{rSubsection}
 
@@ -105,17 +111,11 @@ York, UK\\
 \begin{rSection}{Skills}
 
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Languages & Python, Java, Haskell, SQL, HTML. \\
+Languages & Python, C++, Rust, Haskell, Java, SQL, HTML. \\
 Tools & Linux, Vim, Git, VSCode, JetBrains Suite, RegEx, SQLite, {\fontfamily{lmr}\selectfont\LaTeX}. \\
-Technologies & Django, Numpy, Pandas, Selenium, LibGDX, GitHub, Docker. \\
+Technologies & Pytorch, Django, Numpy, Pandas, Selenium, LibGDX, GitHub, Docker. \\
 \end{tabular}
 
 \end{rSection}
-
-\vfill{}
-\begin{center}
-    \underline{\href{https://tom-pollak.github.io/cv/pretty/2022-resume-tom.pdf}{Take a look at my pretty CV}}
-\end{center}
-
 
 \end{document}
