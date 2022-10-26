@@ -58,13 +58,16 @@ York, UK\\
 \begin{rSection}{Experience}
 
 \begin{rSubsection}{Cisco Meraki}{June - August 2022}{Software Engineer Intern - Camera Intelligence}{London, UK}{}
-    \item Worked with the camera team on the attribute search project, designed and implemented an NLP based image search model
-    which would allow users to use a text box to search for any object in a video feed.
-    \item Uses \href{https://openai.com/blog/clip/}{OpenAI's CLIP model} derivative \href{https://github.com/DRSY/MoTIS}{MoTIS}
-    to encode images and \href{https://github.com/DRSY/MoTIS}{Spotify's Annoy} library to index the images. I used the current motion
-    detector model to feed images into the CLIP model.
-    \item Implemented pipeline in C++, used Pytorch and NCNN model frameworks.
-    \item Using my approach, 10 minute video could be queried in 0.2 seconds -- faster than most non-NLP based models.
+    \item Worked on the attribute search project: designed and implemented an 
+    NLP based image search model which allows users to use a text box to 
+    search for any object in a video feed, e.g. "A man wearing a blue hat riding a bike"
+    \item Used \emph{\href{https://openai.com/blog/clip/}{OpenAI's CLIP}} derivative
+    \emph{\href{https://github.com/DRSY/MoTIS}{MoTIS}} to encode images into vectors and
+    \emph{\href{https://github.com/spotify/annoy}{Spotify's Annoy library}} to index the images.
+    \item Extended the current on-camera motion detection pipeline to feed image "blobs" into the new CLIP model.
+    \item Implemented in C++, using PyTorch and NCNN machine learning frameworks.
+    \item Using my approach, a busy 10 minute video could be queried in 0.2 seconds --
+    faster than most non-NLP models.
     \item \href{https://gist.githubusercontent.com/tom-pollak/1a2e8c1fc61ba269e25c73c02c78007c/raw/45c8cbceda8cd745d6d00cb16a09979778df663b/gistfile1.txt}{\color{blue}{Reference}}
 \end{rSubsection}
 \end{rSection}
@@ -75,21 +78,22 @@ York, UK\\
 
 \begin{rSection}{Projects}
 
-\begin{rSubsection}{Automated Horse Betting Program}{December 2020 - July 2021}{}{}{https://github.com/tom-pollak/each-way-matcher}
+\begin{rSubsection}{Automated Horse Betting Software}{December 2020 - July 2021}{}{}{https://github.com/tom-pollak/each-way-matcher}
     \item Discovers undervalued horses by the bookmaker in each-way betting.
-    \begin{list}{$\sbullet[0.6]$}{\leftmargin=1em} 
-    \itemsep -0.5em \vspace{-0.5em} 
-        \item Exploits the idea that the bookmaker calculates the odds of a horse placing using only the win odds of the horse, without using data from the other horses in the race.
-    \end{list}
-    \item Uses an adapted Kelly Criterion strategy with Expected Growth to calculate the optimal stake.
-    \item Uses Python, Pandas and Selenium to scrape the horse races, interacts with Betfair API to place bets.
+    \item Exploits the idea that the bookmaker calculates the odds of a horse
+    "placing" using only the win odds of the horse, without data from the
+    other horses in the race.
+    \item Uses an adapted Kelly Criterion strategy with Expected Growth to calculate
+    the optimal stake.
+    \item Uses Python, Pandas and Selenium to scrape the horse races, interacts with
+    Betfair API to place bets.
     \item Runs headless on a Raspberry Pi as a scheduled cron job every day.
 \end{rSubsection}
 
 \begin{rSubsection}{Poker Web Application}{April 2019 - July 2020}{}{}{https://github.com/tom-pollak/web-poker}
-    \item Free live poker web app using Python and Django and a Postgres database.
+    \item Free live poker web app using Python, Django and a Postgres database.
     \item Users can create accounts and tables, play poker, and chat with other players.
-    \item Implements websockets using Django Channels and Redis for real-time communication with the users.
+    \item Implements web-sockets using Django Channels and Redis for real-time communication with the users.
     \item Deployed with Docker and Heroku.
 \end{rSubsection}
 
@@ -111,9 +115,9 @@ York, UK\\
 \begin{rSection}{Skills}
 
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Languages & Python, C++, Rust, Haskell, Java, SQL, HTML. \\
-Tools & Linux, Vim, Git, VSCode, JetBrains Suite, RegEx, SQLite, {\fontfamily{lmr}\selectfont\LaTeX}. \\
-Technologies & Pytorch, Django, Numpy, Pandas, Selenium, LibGDX, GitHub, Docker. \\
+Languages & Python, C++, Rust, Haskell, SQL, HTML. \\
+Tools & Linux, NeoVim, Git, VSCode, JetBrains Suite, RegEx, SQLite, {\fontfamily{lmr}\selectfont\LaTeX}. \\
+Technologies & PyTorch, Django, Numpy, Pandas, Selenium, GitHub, Docker. \\
 \end{tabular}
 
 \end{rSection}
