@@ -53,22 +53,6 @@
     \nameskip
 }
 
-%----------------------------------------------------------------------------------------
-%	PRINT THE HEADING LINES
-%----------------------------------------------------------------------------------------
-
-% \let\ori@document=\document
-% \renewcommand{\document}{
-%   \ori@document  % Begin document
-%   \printname % Print the name specified with \name
-%   \@ifundefined{@addressone}{}{ % Print the first address if specified
-%     \printaddress{\@addressone}}
-%   \@ifundefined{@addresstwo}{}{ % Print the second address if specified
-%     \printaddress{\@addresstwo}}
-%      \@ifundefined{@addressthree}{}{ % Print the third address if specified
-%     \printaddress{\@addressthree}}
-  
-% }
 
 %----------------------------------------------------------------------------------------
 %	SECTION FORMATTING
@@ -97,7 +81,7 @@
  {\bf #1} \hfill {\small#2} % Bold company name and date on the right
  \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
   \\[1pt]
-  {\em #3} \hfill {\small \em #4} % Italic job title and location
+  \textsl{\fontsize{9.8}{2cm}\selectfont#3} \hfill \textsl{\small #4} % Italic job title and location
   }
  \ifthenelse{\equal{#5}{}}{}{ % If the third argument is not specified, don't print the job title and location line
   \\
@@ -109,6 +93,21 @@
   }{
   \end{list}
   \vspace{0.2em} % Some space after the list of bullet points
+}
+
+% rSubSection requires at least one \item to be used within it
+\newenvironment{rSubsectionNoList}[5]{% 5 input arguments - company name, year(s) employed, job title and location, link
+{\noindent\ignorespaces\endlinechar=-1}%
+ {\bf #1} \hfill {\small#2} % Bold company name and date on the right
+ \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
+  \\[1pt]
+  \textsl{\fontsize{9.8}{2cm}\selectfont#3} \hfill{\textsl{\small #4}} % Italic job title and location
+  }
+ \ifthenelse{\equal{#5}{}}{}{ % If the third argument is not specified, don't print the job title and location line
+  \\
+  {\small\link{#5}}
+  }
+  }{ \vspace{0.2em} % Some space after the list of bullet points
 }
 
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
@@ -126,3 +125,11 @@
 \newcommand*{\link}{\begingroup\@makeother\#\@mylink}
 \newcommand*{\@mylink}[1]{\href[pdfnewwindow=true]{#1}{#1}\endgroup} 
 \makeatother
+
+% \newcommand\printlist {
+%   \smallskip
+%   \begin{list}{$\sbullet[0.6]$}{\leftmargin=1em} % \cdot used for bullets, no indentation
+%    \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+%       #1
+%   \end{list}
+% }
