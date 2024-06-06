@@ -24,7 +24,7 @@
 
 \def \addressSep {$\diamond$} % Set default address separator to a diamond
 
-% One, two or three address lines can be specified 
+% One, two or three address lines can be specified
 \let \@addressone \relax
 \let \@addresstwo \relax
 \let \@addressthree \relax
@@ -48,7 +48,7 @@
 
 % \printname is used to print the name as a page header
 \def \printname {
-    {\namesize\bf \@name} 
+    {\namesize\textbf{\@name}}
     \par
     \nameskip
 }
@@ -61,7 +61,7 @@
 % Defines the rSection environment for the large sections within the CV
 \newenvironment{rSection}[1]{ % 1 input argument - section name
   \sectionskip
-  \MakeUppercase{\bf #1} % Section title
+  \MakeUppercase{\textbf{#1}} % Section title
   \sectionlineskip
   \hrule % Horizontal line
   \begin{list}{}{ % List for each individual item in the section
@@ -76,16 +76,20 @@
 %	WORK EXPERIENCE FORMATTING
 %----------------------------------------------------------------------------------------
 
-\newenvironment{rSubsection}[5]{% 5 input arguments - company name, year(s) employed, job title and location, link
+\newenvironment{rSubsection}[6]{% 6 input arguments - company name, year(s) employed, job title and location, link, link href
 {\noindent\ignorespaces\endlinechar=-1}%
- {\bf #1} \hfill {\small#2} % Bold company name and date on the right
+ {\textbf{#1}} \hfill {\small#2} % Bold company name and date on the right
  \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
   \\[1pt]
   \textsl{\fontsize{9.8}{2cm}\selectfont#3} \hfill \textsl{\small #4} % Italic job title and location
   }
  \ifthenelse{\equal{#5}{}}{}{ % If the third argument is not specified, don't print the job title and location line
   \\
-  {\small\link{#5}}
+  \ifthenelse{\equal{#6}{}}{
+    {\small\link{#5}}
+  }{
+    {\small\href{#6}{#5}}
+  }
   }
   \smallskip
   \begin{list}{$\sbullet[0.6]$}{\leftmargin=1em} % \cdot used for bullets, no indentation
@@ -98,7 +102,7 @@
 % rSubSection requires at least one \item to be used within it
 \newenvironment{rSubsectionNoList}[5]{% 5 input arguments - company name, year(s) employed, job title and location, link
 {\noindent\ignorespaces\endlinechar=-1}%
- {\bf #1} \hfill {\small#2} % Bold company name and date on the right
+ {\textbf{#1}} \hfill {\small#2} % Bold company name and date on the right
  \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
   \\[1pt]
   \textsl{\fontsize{9.8}{2cm}\selectfont#3} \hfill{\textsl{\small #4}} % Italic job title and location
@@ -113,7 +117,7 @@
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
 \def\namesize{\LARGE} % Size of the name at the top of the document
 \def\addressskip{\smallskip} % The space between the two address (or phone/email) lines
-\def\sectionlineskip{\medskip} % The space above the horizontal line for each section 
+\def\sectionlineskip{\medskip} % The space above the horizontal line for each section
 \def\nameskip{\smallskip} % The space after your name at the top
 \def\sectionskip{\medskip} % The space after the heading section
 
@@ -123,7 +127,7 @@
 
 \makeatletter
 \newcommand*{\link}{\begingroup\@makeother\#\@mylink}
-\newcommand*{\@mylink}[1]{\href[pdfnewwindow=true]{#1}{#1}\endgroup} 
+\newcommand*{\@mylink}[1]{\href[pdfnewwindow=true]{#1}{#1}\endgroup}
 \makeatother
 
 % \newcommand\printlist {
