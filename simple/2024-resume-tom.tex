@@ -43,14 +43,14 @@
 \begin{rSection}{Experience}
 
     \begin{rSubsection}{Cisco Meraki}{June 2023 -- Present}{ML Software Engineer -- Camera Intelligence Team}{Remote, UK}{}{}
-        \item Independently researched, designed, and implemented a novel approach for solving problems in person similarity search, attribute-based search, and tracking with a single model inference \textit{without} using facial recognition.
-        \item Lead a team of 7 engineers in the SF Hackweek 2023 to integrate the project into the frontend dashboard.
-        \item Project was also demoed at Cisco Live 2024.
-        \item Developed \& integrated 10K LOC C++ library into existing codebase, with full testing suite \& benchmarks in GTest.
-        \item Ensured edge device inference was equivalent to the trained model with minimal quantization error.
-        \item Collected and curated a high-quality dataset of >50K images. Worked with labellers and finetuned a number of models (Moondream and others) to eval the quality of the dataset.
-        \item Finetuned a CLIP text encoder to align NLP queries in latent space.
-        \item Originally hired as a summer intern in 2022, rejoined full-time in 2023. \href{https://gist.githubusercontent.com/tom-pollak/1a2e8c1fc61ba269e25c73c02c78007c/raw/45c8cbceda8cd745d6d00cb16a09979778df663b/gistfile1.txt}{{\color{blue}Intern Reference} [Related project]}
+        \item Independently researched, designed, \& implemented a novel unified search experience with a single model.
+        \item Project is set be the "market differentiator" for the entire MV product line and was demoed at Cisco Live 2024.
+        \item Current Technical lead of a team of 6 engineers \& 2 managers to get the project in production with highest priority.
+        \item Also lead a team at the Cisco San Francisco Hackweek 2023 for preliminary work on the project.
+        \item Developed a 10K LOC C++ library, with full testing suite \& benchmarks in GTest.
+        \item Created quantized edge device inference equivalent to the original with minimal quantization error.
+        \item Collected and curated a high-quality dataset of >50K images. Finetuned a SigLIP text encoder to align NLP queries.
+        \item Originally hired as a summer intern in 2022, rejoined full-time in 2023. \href{https://gist.githubusercontent.com/tom-pollak/1a2e8c1fc61ba269e25c73c02c78007c/raw/45c8cbceda8cd745d6d00cb16a09979778df663b/gistfile1.txt}{{\color{blue}Intern Reference} (Related project)}
     \end{rSubsection}
 
 \end{rSection}
@@ -80,31 +80,30 @@
 
 \begin{rSection}{Projects}
 
-    \begin{rSubsection}{Tinyai}{January 2024 -- March 2024}{}{}{https://github.com/tom-pollak/tinyai}{}
-        \item Toy custom deep learning framework on top of PyTorch for learning.
-        \item Initially built alongside fast.ai part 2 SD from fundamentals.
+    \begin{rSubsection}{Interpretability Research}{July 2024 -- Present}{}{}{https://github.com/tom-pollak/interpretability-culture}{}
+        \item Working on interpretability research in my spare time. Completing \href{https://arena3-chapter1-transformer-interp.streamlit.app/}{ARENA 3.0} and applied to \href{https://www.matsprogram.org/}{MATS} program.
+    \end{rSubsection}
+
+    \begin{rSubsection}{Claudette Pydantic}{July 2024}{}{}{https://github.com/tom-pollak/claudette-pydantic}{}
+        \item Adds Pydantic structured outputs through tool use for the \href{https://github.com/AnswerDotAI/claudette}{Claudette} library -- {\color{blue}\href{https://nbviewer.org/github/tom-pollak/claudette-pydantic/blob/main/nbs/examples/pet_store.ipynb}{Example}}.
     \end{rSubsection}
 
     \begin{rSubsection}{NLP Image Retrieval with CLIP}{September 2022 -- June 2023}{}{}{https://tom-pollak.github.io/clip-index}{https://tom-pollak.github.io/clip-index/assets/Enhancing\%20Image\%20Retrieval\%20in\%20Natural\%20Language\%20Processing\%20Applications.pdf}
-        \item University dissertation project -- graded 80\%.
+        \item University dissertation project -- graded 80\%. Built ImageNet CLIP search. Eval models, indexes, hyperparameters.
     \end{rSubsection}
 
-
     \begin{rSubsection}{Automated Horse Betting Software}{December 2020 -- July 2021}{}{}{https://github.com/tom-pollak/each-way-matcher}{}
-        \item Discovers undervalued horses in each-way betting by exploiting bookmaker
-        "place" odds.
+        \item Discovers undervalued horses in each-way betting by exploiting bookmaker "place" odds.
         \item Uses an adapted Kelly Criterion strategy to calculate the optimal stake.
-        \item Uses Python, Pandas and Selenium to scrape the race data, interacts with
-        Betfair API to place bets.
+        \item Calculates conditional probability of a horse finishing in a given place using the win odds of all horses.
     \end{rSubsection}
 
     \begin{rSubsection}{Poker Web Application}{April 2019 -- July 2020}{}{}{https://github.com/tom-pollak/web-poker}{}
         \item Free live poker web app, users can create accounts and tables, play poker, and chat with other players.
-        \item Python / Django, Postgres, Django Channels / Redis for real-time communication. Deployed with Docker \& Heroku.
     \end{rSubsection}
 
     \begin{rSubsection}{SANS Institute}{August 2020}{FOR500 Windows Forensic Analysis}{}{https://www.sans.org/cyber-security-courses/windows-forensic-analysis}{}
-        \item Sponsored by HM government for reaching the final Elite stage of the Cyber Discovery programme.
+        \item Sponsored by HM government for reaching the final Elite stage of the \href{https://cyberstart.com/}{Cyber Discovery program (2018)}.
     \end{rSubsection}
 
 \end{rSection}
@@ -116,9 +115,9 @@
 \begin{rSection}{Skills}
 
     \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-        Languages    & Python, C++, Cuda C.                                                                           \\
-        ML           & PyTorch, Numpy, Pandas, Matplotlib, HF libs, scikit-learn, fast.ai.                          \\
-        Tools        & Linux, VSCode, Neovim, Docker, Git, SQLite, {\fontfamily{lmr}\selectfont\LaTeX}.               \\
+        Languages & Python, C++, Cuda C.                                                             \\
+        ML        & PyTorch, Huggingface, Pydantic, Axolotl, llama.cpp, einops, scikit-learn.        \\
+        Tools     & Linux, VSCode, Neovim, Docker, Git, SQLite, {\fontfamily{lmr}\selectfont\LaTeX}. \\
     \end{tabular}
 
 \end{rSection}
