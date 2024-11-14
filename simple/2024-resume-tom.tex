@@ -42,15 +42,18 @@
 
 \begin{rSection}{Experience}
 
-    \begin{rSubsection}{Cisco Meraki}{June 2023 -- Present}{ML Software Engineer -- Camera Intelligence Team}{Remote, UK}{}{}
-        \item Independently researched, designed, \& implemented a novel unified search experience with a single model.
-        \item Developed a 10K LOC C++ library, with full testing suite \& benchmarks in GTest.
-        \item Currently technical lead of a team of 6 engineers \& 2 managers to get the project in production with highest priority.
-        \item My project is set be the "market differentiator" for the entire MV Camera platform and demoed at Cisco Live 2025.
+    \begin{rSubsection}{Cisco Meraki}{June 2023 -- Present}{ML Software Engineer -- Camera Intelligence Team}{London / Remote, UK}{}{}
+        \item Independently researched, designed, \& implemented a novel unified search experience for the Meraki MV cameras using a custom embedding model, that runs and searches real-time with limited resources on camera.
+
+        \item Currently technical lead of a team of 6. I manage camera firmware, model training, inference, system design. Product is set to be the "market differentiator" for the entire MV Camera platform and demoed at Cisco Live 2025.
+
+        \item Developed production-ready 10K+ LOC C++ library and with full testing suite \& benchmarks in GTest.
+
+        \item Built and curated dataset of >200K objects and synthetic NLP queries, enabling classification and text-based search capabilities on camera.
+
         \item Lead a team at the Cisco San Francisco Hackweek 2023 for preliminary work on the project.
-        \item Ran quantization aware training to make the model suitable for edge device inference.
-        \item Collected and curated a high-quality dataset of >50K images. Finetuned a SigLIP text encoder to align NLP queries.
-        \item Originally hired as a summer intern in 2022, rejoined full-time in 2023. \href{https://gist.githubusercontent.com/tom-pollak/1a2e8c1fc61ba269e25c73c02c78007c/raw/45c8cbceda8cd745d6d00cb16a09979778df663b/gistfile1.txt}{{\color{blue}Intern Reference} (Related project)}
+
+        \item Originally hired as a summer intern in 2022, rejoined full-time in 2023. \href{https://gist.githubusercontent.com/tom-pollak/1a2e8c1fc61ba269e25c73c02c78007c/raw/45c8cbceda8cd745d6d00cb16a09979778df663b/gistfile1.txt}{{\color{blue}Intern Reference}}.
     \end{rSubsection}
 
 \end{rSection}
@@ -62,7 +65,7 @@
 \begin{rSection}{Education}
 
     \begin{rSubsectionNoList}{University of York}{June 2023}{
-            BEng. Computer Science -- First Class Honours
+            BEng. Computer Science -- First Class with Honours
         }{}{}
     \end{rSubsectionNoList}
 
@@ -80,8 +83,21 @@
 
 \begin{rSection}{Projects}
 
-    \begin{rSubsection}{Interpretability Research}{July 2024 -- Present}{}{}{https://github.com/tom-pollak/interpretability-culture}{}
-        \item Working on mechanistic interpretability research in my spare time.
+    \begin{rSubsection}{Interpretability Research}{August 2024 -- Present}{}{}{}{}
+
+        \item Current project: Using \href{https://transformer-circuits.pub/2024/crosscoders/index.html}{Anthropic's Crosscoders} to understand how a LoRA changes a model's behaviour.
+
+        \item Contributed to the \href{https://github.com/jbloomAus/SAELens}{SAELens} library, (\href{https://github.com/jbloomAus/SAELens/pull/321}{\#321}, \href{https://github.com/jbloomAus/SAELens/pull/367}{\#367}) to improve caching activations using Huggingface datasets.
+
+        \item First project: Investigated GPTs trained on 2D grid puzzles similar to ARC-AGI tasks. Trained an SAE, found features related to an individual puzzle task. \href{https://github.com/tom-pollak/interpretability-culture}{GitHub} \hspace{1mm} | \hspace{1mm} \href{https://docs.google.com/document/d/1km2m3oWZMDrekV9_mYHft5pX9PjrM4imKGEdK9vVMr8/edit?usp=sharing}{Report}.
+
+    \end{rSubsection}
+
+    \begin{rSubsection}{nanoViT}{November 2024}{}{}{https://github.com/tom-pollak/nanovit}{}
+        \item Minimal ViT implementation \& training from scratch in PyTorch -- {\color{blue}\href{https://colab.research.google.com/github/tom-pollak/nanoViT/blob/main/tutorials/vit_from_scratch.ipynb}{Created a tutorial for building a ViT from scratch.}}
+
+        \item Single GPU training on CIFAR-10, working on multi-GPU replication of \href{https://arxiv.org/abs/2205.01580}{Better plain ViT baselines for ImageNet-1k}.
+
     \end{rSubsection}
 
     \begin{rSubsection}{Claudette Pydantic}{July 2024}{}{}{https://github.com/tom-pollak/claudette-pydantic}{}
@@ -93,26 +109,25 @@
     \end{rSubsection}
 
     \begin{rSubsection}{Automated Horse Betting Software}{December 2020 -- July 2021}{}{}{https://github.com/tom-pollak/each-way-matcher}{}
-        \item Discovers undervalued horses in each-way betting by exploiting bookmaker "place" odds.
-        \item Uses an adapted Kelly Criterion strategy to calculate the optimal stake.
+        \item Discovers undervalued odds in "each-way" betting, uses an adapted 3-way Kelly Criterion strategy and expected logarithmic growth rate for ranking bets and stake.
         \item Calculates conditional probability of a horse finishing in a given place using the win odds of all horses.
     \end{rSubsection}
 
-    \begin{rSubsection}{Poker Web Application}{April 2019 -- July 2020}{}{}{https://github.com/tom-pollak/web-poker}{}
-        \item Free live poker web app, users can create accounts and tables, play poker, and chat with other players.
-    \end{rSubsection}
-
 \end{rSection}
 
-\begin{rSection}{Courses}
+% %----------------------------------------------------------------------------------------
+% %	Courses
+% %----------------------------------------------------------------------------------------
 
-    \begin{rSubsectionNoList}{Mastering LLMs}{June 2024}{}{}{}{}
-    \end{rSubsectionNoList}
+% \begin{rSection}{Courses}
 
-    \begin{rSubsectionNoList}{SANS Institute -- FOR500 Windows Forensic Analysis}{August 2020}{}{}{}{}
-    \end{rSubsectionNoList}
+%     \begin{rSubsectionNoList}{Mastering LLMs}{June 2024}{}{}{}{}
+%     \end{rSubsectionNoList}
 
-\end{rSection}
+%     \begin{rSubsectionNoList}{SANS Institute -- FOR500 Windows Forensic Analysis}{August 2020}{}{}{}{}
+%     \end{rSubsectionNoList}
+
+% \end{rSection}
 
 %----------------------------------------------------------------------------------------
 %	SKILLS
@@ -121,9 +136,9 @@
 \begin{rSection}{Skills}
 
     \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-        Languages & Python, C++, Cuda C.                                                             \\
-        ML        & PyTorch, Huggingface, Pydantic, Axolotl, llama.cpp, einops, scikit-learn.        \\
-        Tools     & Linux, VSCode, Neovim, Docker, Git, SQLite, {\fontfamily{lmr}\selectfont\LaTeX}. \\
+        Languages & Python, C++, Cuda C.                                                                              \\
+        ML        & PyTorch, Numpy, Pandas, einops, Faiss, Huggingface, scikit-learn, Pydantic, Axolotl.              \\
+        Tools     & Linux, VSCode, Neovim, Docker, Git, SQLite, {\fontfamily{lmr}\selectfont\LaTeX}.                  \\
     \end{tabular}
 
 \end{rSection}
