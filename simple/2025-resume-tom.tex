@@ -9,8 +9,6 @@
 \usepackage{fontspec}
 \setmainfont[]{Roboto}
 
-\name{Tom Pollak}
-
 \begin{document}
 
 \parbox{0.5\textwidth}{
@@ -39,23 +37,28 @@
 %	EXPERIENCE
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{Experience \& Education}
+\begin{rSection}{Experience}
     \begin{rSubsection}{Graphcore}{April 2025 -- Present}{Machine Learning Engineer -- Applied AI}{Bristol, UK}{}{}
-    \item At Graphcore we are focused on building next-generation AI accelerators, and developing the open-source ecosystem to allow for more heterogeneous compute.
+        \item At Graphcore we build next-gen accelerators, and develop the ecosystem for more heterogeneous compute.
 
-    \item Contributing to open-source ML infrastructure: Fixed a PyTorch pipeline parallelism deadlock bug when using Gloo that affected distributed training ({\color{blue}\href{https://github.com/pytorch/pytorch/pull/152938}{\#152938}}).
+        \item Writing Triton kernels targeting our hardware. Authored fused performant kernels for MoE, Flash Attention, RoPe. Performance profiles help inform Triton compiler and PyTorch teams.
 
-    \item Developing mixed-precision pre-training infrastructure. I'm currently working on an experiment targeting a 1B model with up to 1T tokens.
+        \item Presented workshop paper on Bayesian inference: {\color{blue}\href{https://openreview.net/pdf?id=JPXNOiOiod}{Variational Entropy Search is Just 1D Regression}} at NeurIPS.
+
+        \item Helping develop pre-training infrastructure, working on load-balancing large MoE models.
+
+        \item Contributed to PyTorch: PyTorch PP deadlock bug when using Gloo ({\color{blue}\href{https://github.com/pytorch/pytorch/pull/152938}{\#152938}}), fix SDPA MATH backend reference implementenation: {\color{blue}\href{https://github.com/pytorch/pytorch/pull/163508}{(\#163508)}}.
+
     \end{rSubsection}
 
-    \begin{rSubsection}{Cisco}{June 2023 -- April 2025}{Machine Learning Engineer -- Camera Intelligence Team}{London / Remote, UK}{}{}
-        \item Developed computer vision models and pipeline, serving over 4 million networks globally.
+    \begin{rSubsection}{Cisco Meraki}{June 2023 -- April 2025}{Machine Learning Engineer -- Camera Intelligence Team}{London / Remote, UK}{}{}
+        \item At Cisco, I focused on building cross-camera tracking over the 2 years, which was just {\color{blue}\href{https://www.linkedin.com/posts/cisco-enterprise-networking_announcing-the-beta-launch-of-cross-camera-activity-7401681096154980354-ToxM/}{released in Beta.}}
 
-        \item Designed and implemented high-performance C++ inference engine and firmware for edge devices (10K+ LOC).
+        \item Technical lead of a team of 6 engineers personally managing firmware, model training, inference optimization and architecture; product presented at Cisco Live 2025.
 
-        \item Built distributed k-NN search system across mesh network of cameras, enabling real-time search \& retrieval that scales to thousands of devices per network with no hit to the backend.
+        \item Designed and implemented firmware for high-performance C++ inference engine and scalable distributed k-NN search system across mesh network of cameras (10K+ LOC).
 
-        \item Technical lead of a team of 6 engineers managing firmware, model training, inference optimization, and architecture; product featured at Cisco Live 2025.
+        \item This enabled real-time search \& retrieval that scales to thousands of devices per network with no hit to the backend.
 
         \item Created multimodal dataset (>200K objects with a mix of synthetic and human labelled annotations) and fine-tuned CLIP-based models for zero-shot object retrieval.
     \end{rSubsection}
@@ -74,8 +77,20 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Projects}
+    \begin{rSubsection}{NVFP4 Triton Kernels}{March 2025}{}{}{https://github.com/tom-pollak/xverify}{}
+        \item test
+    \end{rSubsection}
 
-    \begin{rSubsection}{Structured Generation for LLMs}{March 2025}{}{}{https://github.com/tom-pollak/xverify}{}
+    \begin{rSubsection}{Minimal reproduction of Diffusion LLMs}{March 2025}{}{}{https://github.com/tom-pollak/dllm/}{}
+        \item foo
+    \end{rSubsection}
+
+    \begin{rSubsection}{Blender Copilot}{March 2025}{}{}{https://github.com/tom-pollak/blender-copilot}{}
+        \item test
+    \end{rSubsection}
+
+
+    \begin{rSubsection}{Structured Generation for LLMs with RLVR}{March 2025}{}{}{https://github.com/tom-pollak/xverify}{}
         \item Developing a library for structured generation and tool use using automatically generated GBNF grammars and Pydantic schema validation for RLVR.
     \end{rSubsection}
 
@@ -99,9 +114,9 @@
     \end{rSubsectionNoList}
 
     \begin{rSubsection}{Algorithmic Trading System -- Horse Racing}{December 2020 -- July 2021}{}{}{https://github.com/tom-pollak/each-way-matcher}{}
-        \item Developed statistical arbitrage system identifying mispriced "each-way" betting opportunities
+        \item Developed statistical arbitrage system identifying mispriced "each-way" bets.
 
-        \item Implemented adapted 3-way Kelly Criterion strategy for optimal stake sizing based on calculated conditional place probabilities.
+        \item 3-way Kelly Criterion strategy for optimal stake sizing based on calculated conditional place probabilities.
 
         \item Successful with high ROI, but low volume and I got banned from profitable bookmakers.
     \end{rSubsection}
@@ -115,8 +130,8 @@
 \begin{rSection}{Skills}
 
     \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-        Languages & Python, C++, Cuda C, Mojo (learning). \\
-        ML        & PyTorch, Triton, Slurm, TorchTitan, vLLM, Modular MAX, Faiss, Huggingface. \\
+        Languages & Python, C++.                                           \\
+        ML        & PyTorch, Triton, TorchTitan, Faiss, Slurm, Kubernetes. \\
     \end{tabular}
 
 \end{rSection}
