@@ -9,6 +9,7 @@
 \usepackage{ragged2e}
 \usepackage{tabularx} % in the preamble
 \usepackage{graphicx}
+\usepackage{fontawesome5}
 
 \pagestyle{empty} % Suppress page numbers
 
@@ -115,11 +116,11 @@
 }
 
 % Project: {name}{date}{repo-path}
-% Shows: Title - repo-path (linked to github). Use \item for bullets inside.
+% Shows: Title [GitHub icon] (linked to github). Use \item for bullets inside.
 \newenvironment{rProject}[3]{%
   \noindent{\textbf{#1}}%
   \ifthenelse{\equal{#3}{}}{}%
-    { -- {\href{https://github.com/#3}{#3}}}%
+    { {\href{https://github.com/#3}{\faGithub}}}%
   \hfill {\small#2}%
   \smallskip
   \begin{list}{$\sbullet[0.6]$}{\leftmargin=1em}
