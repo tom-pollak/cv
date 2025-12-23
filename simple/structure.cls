@@ -121,9 +121,12 @@
     {{\textbf{#1}}}%
     {{\textbf{\href{#3}{#1}}}}%
   \hfill {\small#2}%
-  \def\item{\\\hspace{1em}$\sbullet[0.6]$~}%
+  \smallskip
+  \begin{list}{$\sbullet[0.6]$}{\leftmargin=1em}
+   \itemsep -0.5em \vspace{-0.5em}
 }{%
-  \par\vspace{0.3em}%
+  \end{list}
+  \vspace{0.2em}%
 }
 
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
