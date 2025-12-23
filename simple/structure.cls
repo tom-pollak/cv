@@ -114,31 +114,16 @@
   }{ \vspace{0.2em} % Some space after the list of bullet points
 }
 
-% Compact project entry: {name}{date}{link}{description}
-% Name is hyperlinked if link provided. Description as bullet on new line.
-\newcommand{\rProjectLine}[4]{%
-  \noindent\ifthenelse{\equal{#3}{}}%
-    {{\textbf{#1}}}%
-    {{\textbf{\href{#3}{#1}}}}%
-  \hfill {\small#2}%
-  \ifthenelse{\equal{#4}{}}{}%
-    {\\\hspace{1em}$\sbullet[0.6]$~{\small#4}}%
-  \par\vspace{0.3em}%
-}
-
-% Project with bullets: {name}{date}{link}
+% Project: {name}{date}{link}
 % Name is hyperlinked. Use \item for bullets inside.
 \newenvironment{rProject}[3]{%
   \noindent\ifthenelse{\equal{#3}{}}%
     {{\textbf{#1}}}%
     {{\textbf{\href{#3}{#1}}}}%
   \hfill {\small#2}%
-  \smallskip
-  \begin{list}{$\sbullet[0.6]$}{\leftmargin=1em}
-  \itemsep -0.5em \vspace{-0.5em}
+  \def\item{\\\hspace{1em}$\sbullet[0.6]$~}%
 }{%
-  \end{list}
-  \vspace{0.2em}
+  \par\vspace{0.3em}%
 }
 
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
