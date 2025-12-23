@@ -39,26 +39,24 @@
 
 \begin{rSection}{Experience}
     \begin{rSubsection}{Graphcore}{April 2025 -- Present}{Machine Learning Engineer -- Applied AI}{Bristol, UK}{}{}
-        \item Writing Triton kernels targeting our hardware. Authored fused performant kernels for MoE, Flash Attention, RoPe. Performance profiles help inform Triton compiler and PyTorch teams.
+        \item Author Triton kernels (MoE, Flash Attention, RoPE) targeting our custom hardware. Performance profiling helps inform Triton compiler and PyTorch teams.
 
-        \item Presented workshop paper on Bayesian inference: {\color{blue}\href{https://openreview.net/pdf?id=JPXNOiOiod}{Variational Entropy Search is Just 1D Regression}} at NeurIPS.
+        \item Develop pre-training infrastructure for large MoE models, focusing on load-balancing.
 
-        \item Helping develop pre-training infrastructure, working on load-balancing large MoE models.
+        \item Presented workshop paper at NeurIPS: {\color{blue}\href{https://openreview.net/pdf?id=JPXNOiOiod}{Variational Entropy Search is Just 1D Regression}}.
 
-        \item Contributed to PyTorch: PyTorch PP deadlock bug when using Gloo ({\color{blue}\href{https://github.com/pytorch/pytorch/pull/152938}{\#152938}}), fix SDPA MATH backend reference implementenation: {\color{blue}\href{https://github.com/pytorch/pytorch/pull/163508}{(\#163508)}}.
+        \item Contributed to PyTorch: Pipeline parallelism deadlock fix with Gloo ({\color{blue}\href{https://github.com/pytorch/pytorch/pull/152938}{\#152938}}), SDPA MATH backend reference implementenation fix: {\color{blue}\href{https://github.com/pytorch/pytorch/pull/163508}{(\#163508)}}.
 
     \end{rSubsection}
 
     \begin{rSubsection}{Cisco Meraki}{June 2023 -- April 2025}{Machine Learning Engineer -- Camera Intelligence Team}{London / Remote, UK}{}{}
-        \item Focused on building cross-camera tracking over the 2 years, which was just {\color{blue}\href{https://www.linkedin.com/posts/cisco-enterprise-networking_announcing-the-beta-launch-of-cross-camera-activity-7401681096154980354-ToxM/}{released in Beta.}}
+        \item Led cross-camera tracking from inception to Beta release; presented at Cisco Live 2025.
 
-        \item Technical lead of a team of 6 engineers personally managing firmware, model training, inference optimization and architecture; product presented at Cisco Live 2025.
+        \item Technical lead of 6 engineers across firmware, model training, inference optimization, and system architecture.
 
-        \item Designed and implemented firmware for high-performance C++ inference engine and scalable distributed k-NN search system across mesh network of cameras (10K+ LOC).
+        \item Designed high-performance C++ inference engine and distributed k-NN search across camera mesh networks, enabling real-time search \& retrieval scaling to thousands of devices with zero backend load.
 
-        \item This enabled real-time search \& retrieval that scales to thousands of devices per network with no hit to the backend.
-
-        \item Created multimodal dataset (>200K objects with a mix of synthetic and human labelled annotations) and fine-tuned CLIP-based models for zero-shot object retrieval.
+        \item Built multimodal dataset (200K+ objects, synthetic and human-labelled) and fine-tuned CLIP-based models for zero-shot object retrieval.
     \end{rSubsection}
 
 \end{rSection}
@@ -93,6 +91,7 @@
 
     \begin{rProject}{Blender Copilot}{January 2025}{https://github.com/tom-pollak/blender-copilot}
         \item Blender plugin for generating 3D meshes from text prompts. Modal for inference, FastAPI / FastHTML backend.
+        \item {\color{blue}\href{https://github.com/tom-pollak/blender-copilot/blob/main/README.md#demo}{Demo}}.
     \end{rProject}
 
     \begin{rProject}{xverify -- GBNF structured generation}{March 2025}{https://github.com/tom-pollak/xverify}
