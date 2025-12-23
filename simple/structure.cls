@@ -120,7 +120,7 @@
 \newenvironment{rProject}[3]{%
   \noindent{\textbf{#1}}%
   \ifthenelse{\equal{#3}{}}{}%
-    { {\href{https://github.com/#3}{\faGithub}}}%
+    {\hspace{0.4em}\href{https://github.com/#3}{\faGithub}}%
   \hfill {\small#2}%
   \smallskip
   \begin{list}{$\sbullet[0.6]$}{\leftmargin=1em}
