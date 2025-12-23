@@ -114,12 +114,12 @@
   }{ \vspace{0.2em} % Some space after the list of bullet points
 }
 
-% Project: {name}{date}{link}
-% Name is hyperlinked. Use \item for bullets inside.
+% Project: {name}{date}{repo-path}
+% Shows: Title - repo-path (linked to github). Use \item for bullets inside.
 \newenvironment{rProject}[3]{%
-  \noindent\ifthenelse{\equal{#3}{}}%
-    {{\textbf{#1}}}%
-    {{\textbf{\href{#3}{#1}}}}%
+  \noindent{\textbf{#1}}%
+  \ifthenelse{\equal{#3}{}}{}%
+    { -- {\href{https://github.com/#3}{#3}}}%
   \hfill {\small#2}%
   \smallskip
   \begin{list}{$\sbullet[0.6]$}{\leftmargin=1em}
